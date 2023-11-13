@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tw:build": "tailwindcss -i ./src/css/tailwind.css -o ./public/css/tailwind.css --watch",
+    "tw:dev": "tailwindcss -o tailwind.css --watch",
+    "build": "npx tailwindcss -i ./src/css/tailwind.css -o ./public/css/tailwind.css --watch"
   },
   "repository": {
     "type": "git",
@@ -17,8 +19,13 @@
   },
   "homepage": "https://github.com/Klauditha/platzi_basico_tailwind2_3#readme",
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.5"
+  },
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.7"
   }
 }
